@@ -1,0 +1,42 @@
+{
+  "name": "clojurespecjs",
+  "version": "0.0.1",
+  "description": "Clojure Spec data specification library, ported to JavaScript",
+  "homepage": "https://github.com/gpittarelli/clojurespec-js",
+  "author": {
+    "name": "George Pittarelli",
+    "url": "https://github.com/gpittarelli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gpittarelli/clojurespec-js"
+  },
+  "bugs": {
+    "url": "https://github.com/gpittarelli/clojurespec-js/issues"
+  },
+  "main": "dist/clojurespec.js",
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "specification",
+    "data",
+    "clojure spec",
+    "schema",
+    "generative",
+    "testing"
+  ],
+  "scripts": {
+    "test": "jasmine-node spec/",
+    "build": "./resources/build.sh"
+  },
+  "license": "BSD"
+}
