@@ -16,7 +16,7 @@
      :id "release",
      :compiler
      {:output-to "dist/clojurespec.js",
-      :libs [""]
       :optimizations :advanced
+      :warnings {:single-segment-namespace false}
       :output-wrapper false
       :pretty-print false}}]})
