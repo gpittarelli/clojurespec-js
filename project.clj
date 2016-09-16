@@ -12,10 +12,10 @@
 
   :cljsbuild
   {:builds
-   [{:source-paths ["src"],
-     :id "release",
+   [{:source-paths ["src"]
+     :id "release"
      :compiler
-     {:output-to "dist/clojurespec.js",
+     {:output-to "dist/clojurespec.js"
       :optimizations :advanced
       :warnings {:single-segment-namespace false}
       :output-wrapper false
