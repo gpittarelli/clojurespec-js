@@ -16,6 +16,8 @@
      :id "release"
      :compiler
      {:output-to "dist/clojurespec.js"
+      :output-dir "dist"
+      :source-map "dist/clojurespec.js.map"
       :optimizations :advanced
       :warnings {:single-segment-namespace false}
       :output-wrapper false
