@@ -4,7 +4,7 @@
   :source-paths ["src"]
 
   :dependencies
-  [[org.clojure/clojure "1.9.0"]
+  [[org.clojure/clojure "1.9.0-alpha12"]
    [org.clojure/clojurescript "1.9.227"]]
 
   :plugins
