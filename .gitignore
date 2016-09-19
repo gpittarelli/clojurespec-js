@@ -6,3 +6,9 @@ npm-debug.log
 *.swp
 TODO
 target
+
+dist/cljs/
+dist/clojure/
+dist/clojurespec.cljs
+dist/constants_table.js
+dist/goog/
