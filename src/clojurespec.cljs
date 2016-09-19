@@ -6,7 +6,7 @@
 (defn- coalesce-invalid [x]
   (if (= :cljs.spec/invalid x) invalid x))
 
-(def methods
+(def spec-methods
   [["form" s/form]
    ["&" s/&]
    ["*recursion-limit*" s/*recursion-limit*]
@@ -95,5 +95,5 @@
    ["explain*" s/explain*]
    ["fdef" s/fdef]])
 
-(doseq [[name method] methods]
+(doseq [[name method] spec-methods]
   (goog/exportSymbol name (comp coalesce-invalid method)))
