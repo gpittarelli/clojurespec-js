@@ -43,6 +43,9 @@
 ;;   ["def" s/def]
 ;;   ["fdef" s/fdef]])
 
+(defn ^{:export "and"} and [& forms]
+  (s/and-spec-impl '~[forms] forms nil))
+
 (def spec-methods
   [["form" s/form]
    ["*recursion-limit*" s/*recursion-limit*]
