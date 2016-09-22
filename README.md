@@ -7,6 +7,11 @@ specifying, validating, and testing data structures.
 being made in clojure... but we can still take advantage of the
 features that we do get :) )
 
+In future, maybe I could also use this library as a bridge to bring
+the features that ship with clojure.spec to similar schema/joi/etc
+libraries in the js world. Doing some sort of babel plugin to convert
+clojure specs to flow declarations would be nice as well :)
+
 ## References
 
 Basically no part of this project is my original work. It is entirely
