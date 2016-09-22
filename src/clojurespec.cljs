@@ -47,7 +47,7 @@
   (s/and-spec-impl '~[forms] forms nil))
 
 (def spec-methods
-  [["form" s/form]
+  [["form" s/form true]
    ["*recursion-limit*" s/*recursion-limit*]
    ["*coll-error-limit*" s/*coll-error-limit*]
    ["alt-impl" s/alt-impl]
@@ -101,5 +101,7 @@
    ["maybe-impl" s/maybe-impl]
    ["explain*" s/explain*]])
 
-(doseq [[name method] spec-methods]
-  (goog/exportSymbol name (comp coalesce-invalid method)))
+(doseq [[name method convert?] spec-methods]
+  (->> method
+       (comp (if convert? clj->js identity) coalesce-invalid)
+       (goog/exportSymbol name)))
