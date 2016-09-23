@@ -35,8 +35,12 @@
     "testing"
   ],
   "scripts": {
-    "test": "jasmine-node spec/",
+    "test": "mocha",
     "build": "./resources/build.sh"
   },
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.0.2"
+  }
 }
