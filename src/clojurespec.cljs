@@ -81,7 +81,7 @@
    ["explain-data" s/explain-data]
    ["tuple-impl" s/tuple-impl]
    ["multi-spec-impl" s/multi-spec-impl]
-   ["conform" s/conform]
+   ["conform" s/conform true]
    ["gen*" s/gen*]
    ["fspec-impl" s/fspec-impl]
    ["*coll-check-limit*" s/*coll-check-limit*]
