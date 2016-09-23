@@ -46,6 +46,16 @@
 (defn ^{:export "and"} and [& forms]
   (s/and-spec-impl '~[forms] forms nil))
 
+(defn ^{:export "or"} or [& key-pred-forms]
+  (let [pairs (partition 2 key-pred-forms)
+        keys (mapv first pairs)
+        pred-forms (mapv second pairs)
+        pf pred-forms]
+    (assert (and (even? (count key-pred-forms))
+                 (every? keyword? keys))
+            "spec/or expects k1 p1 k2 p2..., where ks are keywords")
+    (s/or-spec-impl keys pf pred-forms nil)))
+
 (def spec-methods
   [["form" s/form true]
    ["*recursion-limit*" s/*recursion-limit*]
