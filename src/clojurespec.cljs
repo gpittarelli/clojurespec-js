@@ -43,10 +43,10 @@
 ;;   ["def" s/def]
 ;;   ["fdef" s/fdef]])
 
-(defn ^{:export "and"} and [& forms]
+(defn ^{:export "and"} exported-and [& forms]
   (s/and-spec-impl '~[forms] forms nil))
 
-(defn ^{:export "or"} or [& key-pred-forms]
+(defn ^{:export "or"} exported-or [& key-pred-forms]
   (let [pairs (partition 2 key-pred-forms)
         keys (mapv first pairs)
         pred-forms (mapv second pairs)
